@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="site" method="upgrade">
+	<name>MOD_JDOPENTABLE_XML_TITLE</name>
+	<author>JoomDev</author>
+	<creationDate>May 2019</creationDate>
+	<copyright>Copyright (C) 2019 Joomdev, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@joomdev.com</authorEmail>
+	<authorUrl>www.joomdev.com</authorUrl>
+	<version>1.0</version>
+	<description>MOD_JDOPENTABLE_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_jdopentable">mod_jdopentable.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+	<media folder="media" destination="mod_jdopentable">
+		<folder>css</folder>
+	</media>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_jdopentable.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_jdopentable.sys.ini</language>
+	</languages>
+
+	<updateservers>
+		<server type="extension" priority="1" name="mod_jdopentable">https://cdn.joomdev.com/updates/mod_jdopentable.xml</server>
+	</updateservers>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="description" type="textarea" label="MOD_JDOPENTABLE_DESCRIPTION" description="MOD_JDOPENTABLE_DESCRIPTION_DESC" filter="RAW" />
+				<field name="lang" type="list" default="en-US" label="MOD_JDOPENTABLE_LANGUAGE_LABEL">
+					<option value="en-US">MOD_JDOPENTABLE_LANGUAGE_OPTIONS_ENGLISH_US</option>
+					<option value="fr-CA">MOD_JDOPENTABLE_LANGUAGE_OPTIONS_FRANCAIS_CA</option>
+					<option value="de-DE">MOD_JDOPENTABLE_LANGUAGE_OPTIONS_DEUTSCH_DE</option>
+					<option value="es-MX">MOD_JDOPENTABLE_LANGUAGE_OPTIONS_ESPANOL_MX</option>
+					<option value="ja-JP">MOD_JDOPENTABLE_LANGUAGE_OPTIONS_JP</option>
+					<option value="nl-NL">MOD_JDOPENTABLE_LANGUAGE_OPTIONS_NEDERLANDS_NL</option>
+					<option value="it-IT">MOD_JDOPENTABLE_LANGUAGE_OPTIONS_ITALIANO_IT</option>
+				</field>
+				<field name="theme" type="list" default="standard" label="MOD_JDOPENTABLE_VIEW_LABEL">
+					<option value="standard">MOD_JDOPENTABLE_VIEW_OPTIONS_STANDARD</option>
+					<option value="tall">MOD_JDOPENTABLE_VIEW_OPTIONS_TALL</option>
+					<option value="wide">MOD_JDOPENTABLE_VIEW_OPTIONS_WIDE</option>
+					<option value="button">MOD_JDOPENTABLE_VIEW_OPTIONS_BUTTON</option>
+				</field>
+				<field name="iframe" type="radio" default="true" label="MOD_JDOPENTABLE_IFRAME_LABEL" class="btn-group btn-group-yesno">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field name="rid" type="text" default="1" required="true" hint="412810" label="MOD_JDOPENTABLE_RID_LABEL" description="MOD_JDOPENTABLE_RID_DESC"/>
+			</fieldset>
+				<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" default="default" />
+				<field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" rows="3"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
